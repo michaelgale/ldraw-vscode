@@ -1,0 +1,27 @@
+{
+    "name": "ldraw",
+    "displayName": "LDraw",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": ">=0.9.0-pre.1"
+    },
+    "publisher": "Michael Gale",
+    "homepage": "https://github.com/michaelgale/ldraw-vscode/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/michaelgale/ldraw-vscode.git"
+    },
+    "icon": "images/icon.png",
+    "contributes": {
+        "languages": [{
+            "id": "ldraw",
+            "aliases": ["LDraw", "ldr"],
+            "extensions": [".ldr",".dat",".mpd"]
+        }],
+        "grammars": [{
+            "language": "ldraw",
+            "scopeName": "source.ldraw",
+            "path": "./syntaxes/ldraw.tmLanguage.json"
+        }]
+    }
+}

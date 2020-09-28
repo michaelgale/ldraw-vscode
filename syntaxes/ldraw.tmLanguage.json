@@ -1,0 +1,124 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ldraw",
+	"patterns": [
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#nofile"
+		},
+		{
+			"include": "#fileblocks"
+		},
+		{
+			"include": "#linetypes"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"commands": {
+			"patterns": [{
+				"name": "keyword.control.ldraw",
+				"match": "\\b(MODEL|TITLE|STEP|WRITE|CLEAR|PAUSE|SAVE|COMMENT|PART|LINE|TRIANGLE|QUADRILATERAL|CONDITIONAL-LINE)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ldraw",
+				"match": "\\b(ROTATION|CALLOUT|ARROW|CONFIG|ROTSTEP|GROUP|BUFEXCHG|LPUB|SYNTH|BEGIN|END)\\b"
+			}]
+		},
+		"nofile": {
+			"patterns": [{
+                "match": "^\\s*([0])\\s?(NOFILE)\\s?",
+                "captures": {
+                    "1":{
+                        "name": "constant.numeric.ldraw"
+                    },
+                    "2":{
+                        "name": "support.function.ldraw"
+                    }
+                }
+			}]
+		},
+		"fileblocks": {
+			"patterns": [{
+                "match": "^\\s*([0])\\s?(FILE)\\s?(.+)",
+                "captures": {
+                    "1":{
+                        "name": "constant.numeric.ldraw"
+                    },
+                    "2":{
+                        "name": "support.function.ldraw"
+                    },
+                    "3":{
+                        "name": "string.other.ldraw"
+                    }
+                }
+			}]
+		},
+		"linetypes": {
+			"patterns": [{
+                "match": "^\\s*([1-5])\\s?(\\d+)\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(.+)",
+                "captures": {
+                    "1":{
+                        "name": "constant.numeric.ldraw"
+                    },
+                    "2":{
+                        "name": "string.other.ldraw"
+                    },
+                    "3":{
+                        "name": "variable.language.ldraw"
+                    },
+                    "5":{
+                        "name": "constant.numeric.ldraw"
+                    },
+                    "7":{
+                        "name": "variable.language.ldraw"
+                    },
+                    "9":{
+                        "name": "constant.numeric.ldraw"
+                    },
+                    "11":{
+                        "name": "string.other.ldraw"
+                    }
+                }
+            }
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.ldraw",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ldraw",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "[0-9]*\\.?[0-9]+"
+			}]
+		},
+		"comments": {
+			"name": "comment.line.character.ldraw",
+			"match": "^\\s*0.*$"
+		}
+	},
+	"scopeName": "source.ldraw"
+}
