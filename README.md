@@ -11,7 +11,7 @@ LDraw is an open standard for LEGO® CAD software.  It is based on a hierarchy o
 
 ## Syntax Highlighting
 
-This extension provides convenient syntax highlighting for working with LDraw files.  It recognizes all LDraw keywords and some keywords/meta-commands from other tools such as LPub and LSynth.
+This extension provides convenient syntax highlighting for working with LDraw files.  It recognizes all LDraw keywords and some keywords/meta-commands from other tools such as LPub and LSynth.  Lines that contain primitives (line types 1-5) have elements such as colour, coordinates, and matrix coefficients indiviually highlighted into groups for easy visual parsing.
 
 ![Sample](./images/sample.png)
 
@@ -25,7 +25,7 @@ Copy the LDraw extension to the VSCode extension directory:
 
 ```shell
     $ git clone https://github.com/michaelgale/ldraw-vscode.git
-    $ cp -R ldraw-vscode/ ~/.vscode/extensions
+    $ cp -R ldraw-vscode/ ~/.vscode/extensions/ldraw-vscode
 ```
 
 Restart VSCode and the extension should run automatically everytime you open a file with `.ldr`, `.dat` or `.mpd` file extension.
@@ -50,4 +50,4 @@ Restart VSCode and the extension should run automatically everytime you open a f
 
 ## Authors
 
-**ldraw-vsdode** was written by [Michael Gale](https://github.com/michaelgale)
+**ldraw-vscode** was written by [Michael Gale](https://github.com/michaelgale)
