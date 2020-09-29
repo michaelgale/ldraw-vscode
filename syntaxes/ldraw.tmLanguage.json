@@ -9,6 +9,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#meta"
+		},
+		{
 			"include": "#nofile"
 		},
 		{
@@ -24,6 +27,9 @@
 			"include": "#numbers"
 		},
 		{
+			"include": "#hexnumbers"
+		},
+		{
 			"include": "#comments"
 		}
 	],
@@ -37,8 +43,23 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ldraw",
-				"match": "\\b(ROTATION|CALLOUT|ARROW|CONFIG|ROTSTEP|GROUP|BUFEXCHG|LPUB|SYNTH|BEGIN|END)\\b"
+				"match": "\\b(ROTATION|CONFIG|ROTSTEP|GROUP|BUFEXCHG|SYNTH|BEGIN|END)\\b"
 			}]
+		},
+		"meta": {
+			"patterns": [
+				{
+					"match": "^\\s*([0])\\s?(!\\w+)\\s?",
+					"captures": {
+						"1": {
+							"name": "constant.numeric.ldraw"
+						},
+						"2": {
+							"name": "support.function.ldraw"
+						}
+					}
+				}
+			]
 		},
 		"nofile": {
 			"patterns": [{
@@ -48,7 +69,7 @@
                         "name": "constant.numeric.ldraw"
                     },
                     "2":{
-                        "name": "support.function.ldraw"
+                        "name": "variable.language.ldraw"
                     }
                 }
 			}]
@@ -61,7 +82,7 @@
                         "name": "constant.numeric.ldraw"
                     },
                     "2":{
-                        "name": "support.function.ldraw"
+                        "name": "variable.language.ldraw"
                     },
                     "3":{
                         "name": "string.other.ldraw"
@@ -79,14 +100,8 @@
                     "2":{
                         "name": "string.other.ldraw"
                     },
-                    "3":{
-                        "name": "variable.language.ldraw"
-                    },
                     "5":{
                         "name": "constant.numeric.ldraw"
-                    },
-                    "7":{
-                        "name": "variable.language.ldraw"
                     },
                     "9":{
                         "name": "constant.numeric.ldraw"
@@ -114,6 +129,14 @@
 				"name": "constant.numeric",
 				"match": "[0-9]*\\.?[0-9]+"
 			}]
+		},
+		"hexnumbers": {
+			"patterns": [
+				{
+					"name": "string.other.ldraw",
+					"match": "#(?:[0-9a-fA-F]{3}){1,2}"
+				}
+			]
 		},
 		"comments": {
 			"name": "comment.line.character.ldraw",
