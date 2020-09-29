@@ -13,6 +13,13 @@ LDraw is an open standard for LEGO® CAD software.  It is based on a hierarchy o
 
 This extension provides convenient syntax highlighting for working with LDraw files.  It recognizes all LDraw keywords and some keywords/meta-commands from other tools such as LPub and LSynth.  Lines that contain primitives (line types 1-5) have elements such as colour, coordinates, and matrix coefficients indiviually highlighted into groups for easy visual parsing.
 
+**Features**
+
+- special highlights for groups of 3D coordinate values, hex values, and quoted strings
+- support for officially recognized `// double slash comment lines`
+- different highlights for recognized keywords vs. `!META` commands
+- `FILE/NOFILE` highlighted differently to help spot model boundaries in a file
+
 ![Sample](./images/sample.png)
 
 
