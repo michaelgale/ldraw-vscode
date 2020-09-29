@@ -43,7 +43,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ldraw",
-				"match": "\\b(ROTATION|CONFIG|ROTSTEP|GROUP|BUFEXCHG|SYNTH|BEGIN|END)\\b"
+				"match": "\\b(BFC|ROTATION|ROTSTEP|GROUP|BUFEXCHG|SYNTH|BEGIN|END)\\b"
 			}]
 		},
 		"meta": {
@@ -139,9 +139,17 @@
 			]
 		},
 		"comments": {
-			"name": "comment.line.character.ldraw",
-			"match": "^\\s*0.*$"
-		}
+			"patterns": [
+				{
+					"match": "(\/\/.*$)",
+					"captures": {
+						"1": {
+							"name": "comment.line.character.ldraw"
+						}
+					}
+				}
+			]
+		}	
 	},
 	"scopeName": "source.ldraw"
 }
