@@ -32,7 +32,7 @@ Copy the LDraw extension to the VSCode extension directory:
 
 ```shell
     $ git clone https://github.com/michaelgale/ldraw-vscode.git
-    $ cp -R ldraw-vscode ~/.vscode/extensions/ldraw-vscode
+    $ cp -R ldraw-vscode/ ~/.vscode/extensions/ldraw-vscode
 ```
 
 Restart VSCode and the extension should run automatically everytime you open a file with `.ldr`, `.dat` or `.mpd` file extension.

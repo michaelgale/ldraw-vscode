@@ -18,7 +18,16 @@
 			"include": "#fileblocks"
 		},
 		{
-			"include": "#linetypes"
+			"include": "#linetype1"
+		},
+		{
+			"include": "#linetype2"
+		},
+		{
+			"include": "#linetype3"
+		},
+		{
+			"include": "#linetype45"
 		},
 		{
 			"include": "#strings"
@@ -90,9 +99,69 @@
                 }
 			}]
 		},
-		"linetypes": {
+		"linetype1": {
+			"patterns": [
+				{
+					"match": "^\\s*([1])\\s?(\\d+)\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(.+)",
+					"captures": {
+						"1": {
+							"name": "constant.numeric.ldraw"
+						},
+						"2": {
+							"name": "string.other.ldraw"
+						},
+						"5": {
+							"name": "constant.numeric.ldraw"
+						},
+						"9": {
+							"name": "constant.numeric.ldraw"
+						},
+						"11": {
+							"name": "string.other.ldraw"
+						}
+					}
+				}
+			]
+		},
+		"linetype2": {
+			"patterns": [
+				{
+					"match": "^\\s*([2])\\s?(\\d+)\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})",
+					"captures": {
+						"1": {
+							"name": "constant.numeric.ldraw"
+						},
+						"2": {
+							"name": "string.other.ldraw"
+						},
+						"5": {
+							"name": "constant.numeric.ldraw"
+						}
+					}
+				}
+			]
+		},
+		"linetype3": {
+			"patterns": [
+				{
+					"match": "^\\s*([3])\\s?(\\d+)\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})",
+					"captures": {
+						"1": {
+							"name": "constant.numeric.ldraw"
+						},
+						"2": {
+							"name": "string.other.ldraw"
+						},
+						"5": {
+							"name": "constant.numeric.ldraw"
+						}
+					}
+				}
+			]
+		},
+		"linetype45": {
 			"patterns": [{
-                "match": "^\\s*([1-5])\\s?(\\d+)\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(.+)",
+                "match": "^\\s*([4-5])\\s?(\\d+)\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})\\s?(([-.0-9]+\\s*){3})",
                 "captures": {
                     "1":{
                         "name": "constant.numeric.ldraw"
@@ -105,9 +174,6 @@
                     },
                     "9":{
                         "name": "constant.numeric.ldraw"
-                    },
-                    "11":{
-                        "name": "string.other.ldraw"
                     }
                 }
             }
