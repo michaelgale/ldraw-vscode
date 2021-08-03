@@ -22,9 +22,6 @@ This extension provides convenient syntax highlighting for working with LDraw fi
 
 ![Sample](./images/sample.png)
 
-
-## Installation
-
 ## Installation
 
 Installing the language extension is easy using `vsix` package bundle included in this repository.  To install the extension:
