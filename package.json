@@ -1,11 +1,11 @@
 {
     "name": "ldraw",
     "displayName": "LDraw",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "engines": {
         "vscode": ">=0.9.0-pre.1"
     },
-    "publisher": "Michael Gale",
+    "publisher": "BrickDimensions",
     "homepage": "https://github.com/michaelgale/ldraw-vscode/blob/master/README.md",
     "repository": {
         "type": "git",

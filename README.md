@@ -25,17 +25,15 @@ This extension provides convenient syntax highlighting for working with LDraw fi
 
 ## Installation
 
-Copy the LDraw extension to the VSCode extension directory:
+## Installation
 
-- **Windows**: `%USERPROFILE%\.vscode\extensions`
-- **macOS/Linux**: `$HOME/.vscode/extensions`
+Installing the language extension is easy using `vsix` package bundle included in this repository.  To install the extension:
 
-```shell
-    $ git clone https://github.com/michaelgale/ldraw-vscode.git
-    $ cp -R ldraw-vscode/ ~/.vscode/extensions/ldraw-vscode
-```
+1. Select the Extensions icon in the VSCode side bar
+2. Select the (...) menu at the top of the sidebar 
+3. Select `Install from VSIX...` from the menu
+4. Select the `ldraw-X.X.X.vsix` file
 
-Restart VSCode and the extension should run automatically everytime you open a file with `.ldr`, `.dat` or `.mpd` file extension.
 
 ## References
 
